@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna's Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="profile-image" style="background-image: url('files/profile image.jpg');"></div>
+            <h1>Sai Krishna Manukonda</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="content">
+                <h1>SAI KRISHNA MANUKONDA</h1>
+                <p>I am a CS grad student studying in UAB, who will be graduating by DEC 2024.</p>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h1 class="main-header">RESUME</h1>
+            <div class="resume-section">
+                <h3>Education</h3>
+                <ul>
+                    <li>
+                        <h4>University of Alabama at Birmingham</h4>
+                        <p>Master of Science in Computer Science, Expected Dec 2024</p>
+                    </li>
+                    <li>
+                        <h4>Sathyabama University, Chennai</h4>
+                        <p>Completed Bachelors of Engineering in Computer Science in 2021</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resume-section">
+                <h3>Jobs and Internships</h3>
+                <ul>
+                    <li>
+                        <h4>Citrix System Admin (TCS)</h4>
+                        <p>Worked for DuPont as Citrix admin from TCS, India (Jun 2021 to Dec 2022)</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resume-section">
+                <h3>Skills</h3>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>HTML & CSS</li>
+                    <li>Python</li>
+                    <li>React</li>
+                </ul>
+            </div>
+
+            <button id="downloadResume">Download Resume</button>
+        </section>
+
+        <section id="portfolio">
+            <h1 class="main-header">PORTFOLIO</h1>
+            <h3 class="sub-header">Here are some of my clicks</h3>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="https://drive.google.com/uc?export=view&id=1yZfARV-zGP6ZALJbsc2x1tNcti6nyBWS" alt="Image 1">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 2.jpg" alt="Image 2">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 3.jpg" alt="Image 3">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 4.jpg" alt="Image 4.jpg">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 5.jpg" alt="Image 5">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 6.jpg" alt="Image 6">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 7.jpg" alt="Image 7">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 8.jpg" alt="Image 8">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 9.jpg" alt="Image 9">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 10.jpg" alt="Image 10">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 11.jpg" alt="Image 11">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                <div class="grid-item">
+                    <img src="../lab02/files/Portfolio images/image 12.jpg" alt="Image 12">
+                    <div class="hover-text">Click to view</div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h1 class="main-header">REACH ME AT</h1>
+            <div class="link-buttons">
+                <a href="https://www.facebook.com/sai.manukonda/" class="link-button" target="_blank">
+                    <img src="https://blackhillsballoons.com/wp-content/uploads/2021/01/facebook-logo-black.png" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/in/sai-krishna-58375b14b/" class="link-button" target="_blank">
+                    <img src="https://logowik.com/content/uploads/images/linkedin-black9283.jpg" alt="LinkedIn">
+                </a>
+            </div>
+            <form class="contact-form">
+                <h3>Ping me</h3>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 255, 255, 0.5); /* 50% opacity */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    margin: 10px;
+    z-index: 1;
+    display: none;
+    transition: background-color 0.5s ease;
+    border-radius: 25px; /* Pill shape */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.header-container h1 {
+    font-size: 20px;
+    margin: 0;
+    transition: font-size 0.5s ease;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('files/profile image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    transition: background-image 0.5s ease;
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items vertically */
+    padding: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin: 0;
+    transition: font-size 0.5s ease, transform 0.5s ease;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    max-width: 600px;
+    transition: opacity 0.5s ease;
+}
+
+/* Sections */
+section {
+    padding: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#resume, #portfolio {
+    text-align: center;
+}
+
+.main-header {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.sub-header {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.resume-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.resume-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.resume-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume-section li {
+    margin-bottom: 15px;
+}
+
+.resume-section li h4 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.resume-section li p {
+    margin: 5px 0 0 0;
+}
+
+#downloadResume {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 25px; /* Make the button pill-shaped */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#downloadResume:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    margin-top: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.nav-wrapper {
+    background-color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+    border-radius: 25px; /* Pill shape */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Grid Styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    overflow: hidden;
+}
+
+.grid-item {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.grid-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+
+.grid-item .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Disable pointer events on the text */
+}
+
+.grid-item:hover .hover-text {
+    opacity: 1;
+}
+
+/* Animation for grid rows */
+.grid .row-1, .grid .row-3 {
+    animation: moveLeft 30s linear infinite;
+}
+
+.grid .row-2 {
+    animation: moveRight 30s linear infinite;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Expanded Image */
+.expanded-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.expanded-container img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    z-index: 1001;
+    cursor: default;
+    filter: none; /* Ensure the expanded image is not darkened */
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Make the button pill-shaped */
+    cursor: pointer;
+    z-index: 1002;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Prevent background scroll when image is expanded */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Hide footer when image is expanded */
+footer.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;  /* Assuming your website's background color is white */
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: #fff; /* Same as the form background color */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: black;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.contact-form button {
+    display: block;
+    width: 50%;  /* Reduced width */
+    padding: 10px;
+    margin: 0 auto;  /* Center the button */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 25px; /* Make the button pill-shaped */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Link Buttons */
+.link-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.link-button img {
+    width: 100px;  /* Increased width */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.link-button img:hover {
+    transform: scale(1.1);
+}
