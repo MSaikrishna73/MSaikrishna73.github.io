@@ -47,7 +47,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background-image: url('../files/profileimage.jpg');
+    background-image: url('../files/profileimage.JPG');
     background-size: cover;
     background-position: center;
     display: flex;
